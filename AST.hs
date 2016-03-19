@@ -2,11 +2,11 @@ module AST  where
 
 
 data M_prog = M_prog ([M_decl],[M_stmt])
-            deriving (Eq,Show,Ord Read)
+            deriving (Eq,Show,Ord, Read)
                
 data M_decl = M_var (String,[M_expr],M_type)
             | M_fun (String,[(String,Int,M_type)],M_type,[M_decl],[M_stmt])
-            deriving (Eq,Show,Ord Read)
+            deriving (Eq,Show,Ord, Read)
             
 data M_stmt = M_ass (String,[M_expr],M_expr)
             | M_while (M_expr,M_stmt)
@@ -15,12 +15,12 @@ data M_stmt = M_ass (String,[M_expr],M_expr)
             | M_print M_expr
             | M_return M_expr
             | M_block ([M_decl],[M_stmt])
-            deriving (Eq,Show,Ord Read)
+            deriving (Eq,Show,Ord, Read)
             
 data M_type = M_int 
             | M_bool 
             | M_real
-            deriving (Eq,Show,Ord Read)
+            deriving (Eq,Show,Ord, Read)
             
 data M_expr = M_ival Integer
             | M_rval Float
@@ -28,7 +28,7 @@ data M_expr = M_ival Integer
             | M_size (String,Int)
             | M_id (String,[M_expr])
             | M_app (M_operation,[M_expr])
-            deriving (Eq,Show,Ord Read)
+            deriving (Eq,Show,Ord, Read)
             
 data M_operation = M_fn String 
             | M_add
@@ -47,4 +47,4 @@ data M_operation = M_fn String
             | M_float
             | M_floor
             | M_ceil
-            deriving (Eq,Show,Ord Read)
+            deriving (Eq,Show,Ord, Read)

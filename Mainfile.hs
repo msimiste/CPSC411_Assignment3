@@ -4,6 +4,7 @@ import LexAssign
 import ParAssign
 import ErrM
 import SkelAssign
+import Text.Show.Pretty
 
 import System.Environment
 
@@ -16,5 +17,5 @@ main = do
     case ptree of
         Ok tree -> do
             let astree = transProg tree
-            putStrLn $ show astree
+            putStrLn $ (ppShow) astree
         Bad emgs -> putStrLn emgs
