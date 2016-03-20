@@ -6,7 +6,10 @@ all:
 
 run:
 	
-	
+	./Mainfile ./CockettsTests/exp.m+
+	./Mainfile ./CockettsTests/exp.m+~
+	./Mainfile ./CockettsTests/fac.m+
+	./Mainfile ./CockettsTests/fib.m+
 	./Mainfile ./CockettsTests/gcd.m+
 	./Mainfile ./CockettsTests/gcm.m+
 	./Mainfile ./CockettsTests/stats.m+

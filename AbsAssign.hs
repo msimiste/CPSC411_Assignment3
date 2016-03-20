@@ -10,7 +10,6 @@ module AbsAssign where
 newtype Ident = Ident String deriving (Eq, Ord, Show, Read)
 newtype IVAL = IVAL String deriving (Eq, Ord, Show, Read)
 newtype RVAL = RVAL String deriving (Eq, Ord, Show, Read)
-
 data Prog = ProgBlock Block
   deriving (Eq, Ord, Show, Read)
 
