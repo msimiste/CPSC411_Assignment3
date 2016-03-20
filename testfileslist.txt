@@ -1,0 +1,29 @@
+total 60
+drwx------ 2 msimiste jr 4096 Mar 19 19:48 .
+drwx------ 5 msimiste jr 4096 Mar 19 19:54 ..
+-rw------- 1 msimiste jr  657 Mar 19 19:38 exp.m+
+-rw------- 1 msimiste jr  657 Mar 19 19:38 exp.m+~
+-rw------- 1 msimiste jr  326 Mar 19 19:38 fac.m+
+-rw------- 1 msimiste jr  204 Mar 19 19:38 fib.m+
+-rw------- 1 msimiste jr  452 Mar 19 19:38 gcd.m+
+-rw------- 1 msimiste jr  567 Mar 19 19:38 gcm.m+
+-rw------- 1 msimiste jr  791 Mar 19 19:38 stats.m+
+-rw------- 1 msimiste jr  119 Mar 19 19:48 test1.m+
+-rw------- 1 msimiste jr  142 Mar 19 19:38 test2.m+
+-rw------- 1 msimiste jr  102 Mar 19 19:38 test3.m+
+-rw------- 1 msimiste jr  107 Mar 19 19:38 test4.m+
+-rw------- 1 msimiste jr  483 Mar 19 19:38 test5.m+
+-rw------- 1 msimiste jr  479 Mar 19 19:38 test6.m+
+exp.m+
+exp.m+~
+fac.m+
+fib.m+
+gcd.m+
+gcm.m+
+stats.m+
+test1.m+
+test2.m+
+test3.m+
+test4.m+
+test5.m+
+test6.m+

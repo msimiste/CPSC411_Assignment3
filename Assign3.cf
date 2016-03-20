@@ -99,5 +99,5 @@ token RVAL digit* '.' digit+;
 rules BVAL ::= "true" | "false";
 
 
-comment "--" ;
-comment "{-" "-}" ;
+comment "%" ;
+comment "/*" "*/" ;

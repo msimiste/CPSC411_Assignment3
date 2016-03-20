@@ -170,11 +170,18 @@ transInt_factor x = case x of
   Int_factor3 expr -> M_app(M_float,[transExpr(expr)])
   Int_factor4 expr -> M_app(M_floor,[transExpr(expr)])
   Int_factor5 expr -> M_app(M_ceil,[transExpr(expr)])
-  Int_factor6 ident modifierlist -> M_id(transIdent(ident),transModifier_list(modifierlist))
+  Int_factor6 ident modifierlist -> case modifierlist of
+    --modifierlist -> M_id(transIdent(ident),transModifier_list(modifierlist))
+    Modifier_list1 arguments -> M_app(M_fn(transIdent(ident)),transModifier_list(modifierlist))
+    Modifier_listArray_dimensions arraydimensions  -> M_id(transIdent(ident), transModifier_list(modifierlist))
+    --Modifier_list1 arguments -> M_app(M_fn(transIdent(ident)),transArguments(arguments))
+    --Modifier_listArray_dimensions arraydimensions -> M_id(transIdent(ident), transArray_dimensions(arraydimensions))
+    --Modifier_list1 arguments -> M_app(M_fn(transIdent(ident)),transModifier_list(modifierlist) ++ transArguments(arguments))
+    --Modifier_listArray_dimensions arraydimensions -> M_id(transIdent(ident), transModifier_list(modifierlist) ++ transArray_dimensions(arraydimensions))
   Int_factorIVAL ival -> M_ival (transIVAL(ival))
   Int_factorRVAL rval -> M_rval (transRVAL(rval))
   Int_factorBVAL bval -> M_bval (transBVAL(bval)) 
-  Int_factor7 intfactor -> transInt_factor(intfactor)
+  Int_factor7 intfactor -> M_app(M_neg,[transInt_factor(intfactor)])
   
 transModifier_list :: Modifier_list -> [M_expr]
 transModifier_list x = case x of
